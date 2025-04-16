@@ -13,3 +13,9 @@ jobs:
 
       - name: Run backend tests
         run: dotnet test
+
+      - name: Build frontend
+        run: |
+          cd DotnetTemplate.Web
+          npm install
+          npm run build
