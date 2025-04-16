@@ -24,3 +24,8 @@ jobs:
         run: |
           cd DotnetTemplate.Web
           npm t
+
+      - name: Run frontend tests
+        run: |
+          cd DotnetTemplate.Web
+          npm run lint
