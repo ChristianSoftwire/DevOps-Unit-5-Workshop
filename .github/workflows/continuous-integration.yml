@@ -10,3 +10,6 @@ jobs:
 
       - name: Build backend
         run: dotnet build
+
+      - name: Run backend tests
+        run: dotnet test
