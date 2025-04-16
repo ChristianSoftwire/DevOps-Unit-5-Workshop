@@ -21,4 +21,6 @@ jobs:
           npm run build
 
       - name: Run frontend tests
-        run: npm t
+        run: |
+          cd DotnetTemplate.Web
+          npm t
