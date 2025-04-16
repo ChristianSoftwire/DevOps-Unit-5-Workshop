@@ -1,0 +1,37 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build backend
+        run: dotnet build
+
+      - name: Run backend tests
+        run: dotnet test
+
+      - name: Build frontend
+        run: |
+          cd DotnetTemplate.Web
+          npm install
+          npm run build
+
+      - name: Run frontend tests
+        run: |
+          cd DotnetTemplate.Web
+          npm t
+
+      - name: Run frontend tests
+        run: |
+          cd DotnetTemplate.Web
+          npm run lint
