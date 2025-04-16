@@ -1,14 +1,14 @@
-import { functionOne } from '../home/example';
+import { functionOne } from "../home/example";
 
-describe('Example', () => {
-  it('can run functionOne', () => {
+describe("Example", () => {
+  it("can run functionOne", () => {
     // Given
     const one = 1;
 
     // When
-    functionOne();
+    const actual = functionOne();
 
     // Then
-    expect(1).toEqual(one);
+    expect(actual).toEqual(1);
   });
 });
