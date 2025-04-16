@@ -19,3 +19,6 @@ jobs:
           cd DotnetTemplate.Web
           npm install
           npm run build
+
+      - name: Run frontend tests
+        run: npm t
